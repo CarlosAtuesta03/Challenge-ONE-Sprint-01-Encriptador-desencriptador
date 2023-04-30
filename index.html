@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="imagenes/Logo@2x-edit.png">
+    <title>Encriptador y Desencriptador de texto</title>
+</head>
+
+<body>
+    
+  <main>
+
+    <section class="imagen-logo-alura">
+
+        <img src="imagenes/Logo.png" alt="Logo de alura">
+
+    </section>
+    
+    <section class="seccion-input">
+
+        <form>
+
+            <textarea class="input-textarea" placeholder="Ingrese el texto aqui" cols="30" rows="10" required id="input-texto" style="text-transform:lowercase;" value=""  onkeyup="javascript:this.value=this.value.toLowerCase();"></textarea>
+
+            <p class="text-advertencia"><img class="img-advertencia" src="imagenes/bi_exclamation-circle-fill.png" alt="Icono de advertencia"> Solo letras minúsculas y sin acentos</p>
+
+        </form>
+
+        <div class="conte-butttos">
+
+            <input class="input-button" type="button" value="Encriptar!" id="btn-encriptar">
+            <input class="input-button2" type="button" value="Desencriptar!" id="btn-desencriptar">
+            
+        </div>
+    </section>
+
+    <section class="section-area-texto">
+        <div id="no-existe-text" class="area-muestra-texto">
+    
+            <img class="imgen-seccion-resultado-texto" src="imagenes/Buscar.png" alt="Ilustacion de una persona observando">
+            
+            <div class="content-parrafo-compo-texto-resul">
+                <p class="text-parrafo-1">
+                    Ningún mensaje fue encontrado
+                </p>
+                <p class="text-parrafo-2">
+                    Ingresa el texto que desees encriptar o desencriptar.
+                </p>
+            </div>
+        </div>
+    
+        <div id="text-input-salida" class="area-muestra-texto" style="display: none;">
+    
+            <div>
+                <input class="text-input-salida" type="hidden" id="msg">
+                <p id="contenido-de-texto-convertido" class="texo-resultado"></p>
+            </div>
+
+            <div class="conten-button-copiar-texto">
+    
+                <input style="display: none;" class="input-button2" type="submit" value="Copiar" id="copiarTexto" onclick="copyText()">
+    
+            </div>
+    
+            
+        </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
